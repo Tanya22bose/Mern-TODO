@@ -24,7 +24,7 @@ class App extends React.Component {
   addTask(e){
     var url = "http://localhost:5000/api/todo/TODOR/AddTask"
     fetch(url, {
-      method: 'POST',
+      method: "POST",
       body: JSON.stringify({
         "task":this.state.task
       }),
@@ -56,7 +56,7 @@ class App extends React.Component {
     }
 
   deleteTask(key){
-    var url = "http://localhost:5000/api/todo/TODOR/deleteTask" + key;
+    var url = "http://localhost:5000/api/todo/TODOR/deleteTask/" + key;
     console.log(url);
     fetch(url,{
       method:"POST",

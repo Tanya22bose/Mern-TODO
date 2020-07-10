@@ -23,17 +23,23 @@ var addTask = async(req,res) => {
         await createTask.save();
     }
 
-    catch (error){
-        console.log(error);
-        res.status(500).send();
-        return;
+    catch (err){
+        console.log(err);
+        const error = new HttpResponse(
+            err,
+            500
+        );
+        return res.status(500).json({ response: error })
     }
 
-    res.status(201).json(data);
+    res.status(201).json({
+        data
+    });
 }
 
 var deleteTask= async(req,res) => {
     const {id} = req.params;
+    console.log(id)
     try {
         await todos.findByIdAndDelete(id);
         console.log('deleted');

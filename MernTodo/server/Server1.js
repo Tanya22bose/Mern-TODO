@@ -24,9 +24,11 @@ app.use((req,res,next) => {
 
 app.use('/api/todo', require('./routes/index'));
 
-mongoose.connect('mongodb://127.0.0.1:27017/tododb', {
+mongoose.connect('mongodb://127.0.0.1:27017/tododbs', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
 })
 
 .then(() => {

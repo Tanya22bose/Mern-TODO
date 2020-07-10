@@ -4,7 +4,7 @@ const todoController = require('../controllers/todoControllers');
 
 router.get('/ShowTask', todoController.showTask)
 
-router.post('/AddTask', todoController.AddTask)
+router.post('/AddTask', todoController.addTask)
 
 router.post('/deleteTask/:id', todoController.deleteTask)
 
