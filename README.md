@@ -1,1 +1,1 @@
-# Mern-TODO
+## TODO list Application using MERN stack

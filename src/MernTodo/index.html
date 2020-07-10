@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            url = "http://localhost:8081/todo/list";
+            function loadwithPromises(){
+                fetch(url).then(result => { 
+                result.json.then(finalresult => {
+            })
+        })
+
+        .catch(err => {
+
+        })
+    }
+    function loadwithAsyncAwait(){
+        try {
+            var result = await fetch(url);
+            var finalresult = await result.json();
+        }
+        catch(err){
+
+        }
+    }
+        </script>    
+    </body>
+</html>
+
+<!-- use await function inside async function -->
